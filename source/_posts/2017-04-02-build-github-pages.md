@@ -78,12 +78,13 @@ $ hexo generate      //可简化为hexo g
 (6). 部署到github上
   修改_config.yml最下面的deploy中的参数，其中repo为github上你的博客仓库地址，并不是博客的域名。
   
-{% codeblock %}
+``` Json
 deploy:
-  type: git
-  repo: https://github.com/username/myblog
-  branch: master
-{% endcodeblock %}
+     type: git
+     repo: https://github.com/username/myblog
+     branch: master
+```
+
 ``` bash
 $ cnpm install hexo-deployer-git --save
 ```
@@ -92,9 +93,9 @@ $ cnpm install hexo-deployer-git --save
 $ hexo deploy   //可简写为hexo d
 ```
 成功后你会看到github上出现了public文件夹中的文件，说明部署成功。现在你可以登录博客地址，查看是否和本地localhost://4000中的内容一样。是否发现样式全无，接下来，设置_config.yml中：
-{% codeblock %}
+```Json
 url: https://yoursite.com      //你的博客地址
-{% endcodeblock %}
+```
   然后再执行
 ``` bash
 $ hexo clean
